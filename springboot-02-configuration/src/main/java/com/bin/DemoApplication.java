@@ -1,6 +1,7 @@
 package com.bin;
 
 import com.bin.config.FoodConfig;
+import com.bin.config.VegetablesConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -13,7 +14,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
  * 配置文件对应的类将作为它的参数
  */
 @SpringBootApplication
-@EnableConfigurationProperties({FoodConfig.class})
+@EnableConfigurationProperties({VegetablesConfig.class,FoodConfig.class})
 public class DemoApplication {
     public static void main(String[] args) {
         //使用SpringApplication类的静态方法 启动springboot程序

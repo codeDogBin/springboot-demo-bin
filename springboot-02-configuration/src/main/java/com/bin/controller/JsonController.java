@@ -1,7 +1,9 @@
 package com.bin.controller;
 
 import com.bin.bean.Food;
+import com.bin.bean.Vegetables;
 import com.bin.config.FoodConfig;
+import com.bin.config.VegetablesConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,5 +39,15 @@ public class JsonController {
         food.setMeat(foodConfig.getMeat());
         food.setRice(foodConfig.getRice());
         return food;
+    }
+    @Autowired
+    private VegetablesConfig vegetablesConfig;
+    @RequestMapping("/vegetables")
+    public Vegetables vegetables(){
+        Vegetables vegetables = new Vegetables();
+        vegetables.setEggplant(vegetablesConfig.getEggplant());
+        vegetables.setGreenpeper(vegetablesConfig.getGreenpeper());
+        vegetables.setPotato(vegetablesConfig.getPotato());
+        return vegetables;
     }
 }
