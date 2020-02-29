@@ -1,8 +1,10 @@
 package com.bin.controller;
 
 import com.bin.bean.Food;
+import com.bin.bean.Lengfen;
 import com.bin.bean.Vegetables;
 import com.bin.config.FoodConfig;
+import com.bin.config.LengfenConfig;
 import com.bin.config.VegetablesConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -38,6 +40,7 @@ public class JsonController {
         Food food = new Food();
         food.setMeat(foodConfig.getMeat());
         food.setRice(foodConfig.getRice());
+        food.setSauce(foodConfig.getSauce());
         return food;
     }
     @Autowired
@@ -49,5 +52,15 @@ public class JsonController {
         vegetables.setGreenpeper(vegetablesConfig.getGreenpeper());
         vegetables.setPotato(vegetablesConfig.getPotato());
         return vegetables;
+    }
+
+    @Autowired
+    private LengfenConfig lengfenConfig;
+    @RequestMapping("/lengfen")
+    public Lengfen lengfen(){
+        Lengfen lengfen = new Lengfen();
+        lengfen.setFood(lengfenConfig.getFood());
+        lengfen.setSauce(lengfenConfig.getSauce());
+        return lengfen;
     }
 }
