@@ -1,13 +1,19 @@
 package com.bin;
 
+import com.bin.config.FoodConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
  * @SpringBootApplication
  * 声明我们的入口类 并且声明springboot项目的
+ * @EnableConfigurationProperties
+ * 告诉主程序要自动引入配置文件
+ * 配置文件对应的类将作为它的参数
  */
 @SpringBootApplication
+@EnableConfigurationProperties({FoodConfig.class})
 public class DemoApplication {
     public static void main(String[] args) {
         //使用SpringApplication类的静态方法 启动springboot程序
