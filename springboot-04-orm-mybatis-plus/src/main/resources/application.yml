@@ -1,0 +1,16 @@
+server:
+  port: 8090
+#配置mysql链接参数
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test_schema?serverTimezone=UTC
+    username: root
+    password: root
+
+mybatis:
+#   方式一：声明mybatis配置文件所在地
+#  config-location: classpath:mybatis-config.xml
+ # 方式二：声明mapper的地址
+# mapper-locations: classpath*:mybatis/mapper/*.xml
+ # 方式三：声明实体类所在的路径的
+# mybatis.type-aliases-package: com.bin.model
