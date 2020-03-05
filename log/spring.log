@@ -1,0 +1,10 @@
+2020-03-04 16:54:48.532  INFO 11892 --- [main] c.b.s.LoggingApplication                 : Starting LoggingApplication on DESKTOP-QB6IQBM with PID 11892 (D:\gitSource\springboot-demo-bin\springbot-06-logging\target\classes started by lb in D:\gitSource\springboot-demo-bin)
+2020-03-04 16:54:48.538  INFO 11892 --- [main] c.b.s.LoggingApplication                 : No active profile set, falling back to default profiles: default
+2020-03-04 16:54:52.819  INFO 11892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-04 16:54:52.838  INFO 11892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-04 16:54:52.840  INFO 11892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-04 16:54:53.178  INFO 11892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-04 16:54:53.180  INFO 11892 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4531 ms
+2020-03-04 16:54:54.098  INFO 11892 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-04 16:54:54.833  INFO 11892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-04 16:54:54.838  INFO 11892 --- [main] c.b.s.LoggingApplication                 : Started LoggingApplication in 7.307 seconds (JVM running for 9.368)

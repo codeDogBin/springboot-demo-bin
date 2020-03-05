@@ -19,12 +19,11 @@ public class WebContainerApplication {
     }
 
     @Bean
-    public RouterFunction<ServerResponse> hello(){
-        return route(GET("/hello"),serverRequest -> ok().body(
-                Mono.just("Hello world"),String.class
+    public RouterFunction<ServerResponse> hello() {
+        return route(GET("/hello"), serverRequest -> ok().body(
+                Mono.just("Hello world"), String.class
         ));
     }
-
 
 
 }

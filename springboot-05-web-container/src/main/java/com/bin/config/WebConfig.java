@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class WebConfig {
     @Bean
-    public WebServerFactoryCustomizer<ConfigurableWebServerFactory> customizer(){
+    public WebServerFactoryCustomizer<ConfigurableWebServerFactory> customizer() {
         return new WebServerFactoryCustomizer<ConfigurableWebServerFactory>() {
             @Override
             public void customize(ConfigurableWebServerFactory factory) {
@@ -21,14 +21,12 @@ public class WebConfig {
     }
 
     @Bean
-    public ApplicationRunner runner(WebServerApplicationContext context){
+    public ApplicationRunner runner(WebServerApplicationContext context) {
         return args -> {
-            System.out.println("webConfig---当前web容器的实现类是"+context.getWebServer().getClass().getName());
+            System.out.println("webConfig---当前web容器的实现类是" + context.getWebServer().getClass().getName());
         };
 
     }
-
-
 
 
 }
